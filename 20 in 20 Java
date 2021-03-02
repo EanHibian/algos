@@ -1,1 +1,22 @@
 
+2 # Sum:
+
+write a function that takes in an integer array and an integer target sum. If any two integers within array equal target sum return 
+those integers in an array. If no integers equal target sum, return empty array. Cant use same number twice
+
+/////////
+
+class Program {
+  public static int[] twoNumberSum(int[] array, int targetSum) {
+   
+		for (int i = 0; i < array.length; i ++) {
+			for (int j = i +1 ; j < array.length; j ++){
+				if (array[i] + array[j] == targetSum) {
+					return new int [] {array[i] , array[j]};
+				}
+			} 
+		}
+		
+    return new int[0];
+  }
+}
